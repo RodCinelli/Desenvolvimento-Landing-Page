@@ -1,4 +1,6 @@
 @use 'hero';
+@use 'components/infos_bar';
+@use 'components/buttons';
 
 * {
     margin: 0;
@@ -6,6 +8,7 @@
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     color: #fff;
+    list-style: none;
 }
 
 .container {
@@ -13,11 +16,13 @@
     width: 100%;
     margin: 0 auto;
     
-    @media (max-width:640px) {
-        max-width: 80%;
-    }
-
+    /* Primeiro, defina regras para telas um pouco maiores */
     @media (max-width: 1024px) {
         max-width: 90%;
+    }
+
+    /* Depois, regras para telas menores */
+    @media (max-width: 640px) {
+        max-width: 80%;
     }
 }
